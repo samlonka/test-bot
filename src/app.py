@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_option('server.enableCORS', False)
+st.set_page_config(base="http://localhost:8501")
 from llama_index.core import VectorStoreIndex, StorageContext, Document
 from llama_index.llms.openai import OpenAI
 import os
