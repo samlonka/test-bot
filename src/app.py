@@ -143,8 +143,3 @@ if st.session_state.messages[-1]["role"] != "assistant":
             message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message)
 
-
-if __name__ == '__main__':
-    # Use the appropriate port for GitHub Pages
-    port = int(os.environ.get('PORT', 8501))
-    st.run_app(port=port)
