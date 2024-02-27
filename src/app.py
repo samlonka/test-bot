@@ -1,7 +1,8 @@
 import streamlit as st
+st.set_option('server.enableCORS', False)
 from llama_index.core import VectorStoreIndex, StorageContext, Document
 from llama_index.llms.openai import OpenAI
-import openai
+import os
 import pandas as pd
 from llama_index.core import Settings
 from llama_index.vector_stores.pinecone import PineconeVectorStore
@@ -18,7 +19,6 @@ import tiktoken
 from llama_index.core.callbacks import CallbackManager, TokenCountingHandler
 from llama_index.core.tools import QueryEngineTool, ToolMetadata
 from FunctionTools import ScriptureDescriptionToolSpec, MantraToolSpec
-
 
 
 #load keys
@@ -142,3 +142,9 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.write(response.response)
             message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message)
+
+
+if __name__ == '__main__':
+    # Use the appropriate port for GitHub Pages
+    port = int(os.environ.get('PORT', 8501))
+    st.run_app(port=port)
