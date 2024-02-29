@@ -3,7 +3,7 @@ st.set_page_config(
     page_title="SVARUPA AI",
     layout="centered",  # or "wide"
     initial_sidebar_state="auto"  # or "expanded" or "collapsed"
-)
+    )
 from llama_index.core import VectorStoreIndex, StorageContext, Document
 from llama_index.llms.openai import OpenAI
 import os
