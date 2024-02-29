@@ -1,7 +1,7 @@
 - name: Deploy to GitHub Pages
   uses: streamlit/action@main
   with:
-    args: "src/app.py"
+    args: "app.py"
     env:
       STREAMLIT_SERVER_PORT: ${{ random(8000, 9000) }}
       STREAMLIT_SERVER_HEADLESS: true
