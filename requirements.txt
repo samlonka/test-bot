@@ -1,10 +1,9 @@
-openai
-sentence_transformers
+openai==1.12.0
+sentence_transformers==2.4.0
 llama_index==0.10.4
 llama-index-vector-stores-pinecone
 llama-index-embeddings-huggingface
-pinecone-client
-cohere 
-sentence_transformers
-chardet
-streamlit
+pinecone-client==3.1.0
+cohere==4.50 
+chardet==5.2.0
+streamlit==1.31.1
